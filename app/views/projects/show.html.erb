@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<%div_for @project do%>
+  <h2><%= @project.name %></h2>
+  <p><%= @project.desciption %></p>
+<% end %>
+
+<% if @project.due < Time.now %>
+  this project has expired
+<% else%>
+  This project is due later
+<% end%>
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<p>
+  <b>Desciption:</b>
+  <%= @project.desciption %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @project.priority %>
+</p>
+
+<p>
+  <b>Due:</b>
+  <%= @project.due %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <ul>
+    <% @project.tags.each do |tag|%>
+    <li><%= tag.name %></li>
+    <% end %>
+  </ul>
+</p>  
+
+<% if @project.image? %>
+  <%= image_tag @project.image.url %>
+  <br />
+  <%= link_to @project.image.url, @project.image.url%>
+<% end %>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+
+<% content_for :sidebar do %>
+  <h4>Some Sidebar Stuff</h4>
+  <ul>
+    <li>Thing 1</li>
+    <li>Thing 2</li>
+  </ul>  
+<% end %>

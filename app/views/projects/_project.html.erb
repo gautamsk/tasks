@@ -1,0 +1,19 @@
+<% div_for project do%>
+  <h4><%= link_to project.name,project %> </h4>
+  <span class="priority">
+    <%= project.priority_name%>
+  </span>
+  <p class="description">
+    <%= project.desciption %>
+  </p>
+  <h5>Tasks</h5>
+  <ol>
+    <% project.tasks.each do |task|%>
+      <li> <%= link_to task.name, [task.project, task] %> </li>
+    <% end%>
+  </ol>
+  <div class="meta">
+    <%= link_to "Edit", edit_project_path(project) %>
+    <%= link_to "Delete", project, :confirm =>'Are you sure?', :method => :delete %>
+  </div>
+<%end%>

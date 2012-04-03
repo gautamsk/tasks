@@ -1,0 +1,25 @@
+<h1>Listing projects</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Due</th>
+    <th>Priority</th>
+  </tr>
+  <% @projects.each do |project|%>
+    <% content_tag_for :tr,project do%>
+      <td><%= project.name %></td>
+      <td><%= project.due%></td>
+      <td><%= project.priority_name%></td>
+    <% end %>
+  <% end %>
+</table>
+<ul>
+  <% @projects.each do |project| %>
+
+    <li><%= project.name %></li>
+  <% end %>
+</ul>
+<%= render @projects %>
+<br />
+
+<%= link_to 'New Project', new_project_path %>

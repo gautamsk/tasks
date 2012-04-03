@@ -1,0 +1,9 @@
+1333448492
+ProjectsController	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	class ProjectsController 
+create	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	  def create
+destroy	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	  def destroy
+edit	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	  def edit
+index	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	  def index
+new	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	  def new
+show	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	  def show
+update	/home/gautam/Documents/workspace/github_repos/tasks/app/controllers/projects_controller.rb	  def update
